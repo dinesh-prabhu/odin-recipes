@@ -8,7 +8,7 @@
     <title>Odin Recipes</title>
     <link rel="stylesheet" href="styles/style.css">
 </head>
-<body>
+<body onload="positionFooter()">
     <header id="recipies-header">
         <h1>Odin Recipes</h1>
         <p>Cooking is one of the greatest gifts.</p>
@@ -27,8 +27,13 @@
             <span class="recipe-name">Alfredo Sauce</span>
         </a>
     </main>
-    <footer class="footer footer-fixed">
-        <p>Made by <a href="https://github.com/dinesh-prabhu">Dinesh</a>.</p>
+    <footer id="homepage-footer" class="footer">
+        <p>Made by <a href="https://github.com/dinesh-prabhu" target="_blank">Dinesh</a>.<br>All images are copyright to their respective owners.</p>
     </footer>
+    <script>
+        function positionFooter() {
+            document.getElementById("homepage-footer").classList.toggle("footer-fixed", window.innerHeight > document.body.clientHeight);
+        }
+    </script>
 </body>
 </html>
